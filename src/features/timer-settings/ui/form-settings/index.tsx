@@ -12,10 +12,10 @@ import {
   setLargeBreakFrequency,
   setSmallBreak,
   setTimeValue,
-} from "../../lib/utils/action-creators";
+} from "../../lib/action-creators";
 import { Layout } from "../layout";
 import { TimerRanges } from "../../model/enums";
-import { reducer } from "../../lib/utils/timer-reducer";
+import { reducer } from "../../lib/timer-reducer";
 
 interface SettingPageCallbacks {
   [N: string]: (e: ChangeEvent<HTMLInputElement>) => void;

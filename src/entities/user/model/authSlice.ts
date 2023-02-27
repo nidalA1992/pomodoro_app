@@ -1,12 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
+//TODO: решить проблему с использованием app в entities
 import { client } from "app/models/apollo";
+
 import { errorHandler } from "shared/lib/utils/error-handler";
 
 import type { IAuthState } from "./types";
-import { AuthLocalStorage } from "../lib";
 import { signIn, signUp } from "./async-thunks";
+import { AuthLocalStorage } from "../lib/AuthLocalStorage";
 
 const initialState: IAuthState = {
   user: "",

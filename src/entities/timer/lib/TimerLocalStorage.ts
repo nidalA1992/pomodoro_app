@@ -1,6 +1,6 @@
-import { ITimerOptions } from "../model";
-
 import { Errors } from "shared/model/enums";
+
+import { ITimerOptions } from "../model/types";
 
 export class TimerLocalStorage {
   static errorMessage = Errors.LOCAL_STORAGE_ERROR;

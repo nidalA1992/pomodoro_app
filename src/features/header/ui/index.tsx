@@ -1,7 +1,9 @@
 import React from "react";
 
 import { Logout } from "features/user/logout";
-import { User } from "entities/user/ui";
+import { selectUser } from "entities/user";
+import { useAppSelector } from "shared/lib";
+import { UserBadge } from "shared/ui";
 
 import { Layout } from "./layout";
 import { Logo } from "./logo";
@@ -13,10 +15,12 @@ interface IHeaderProps {
 }
 
 export const Header = (props: IHeaderProps) => {
+  const username = useAppSelector(selectUser);
+
   return (
     <Layout>
       <Logo />
-      <User />
+      <UserBadge username={username} />
       <NavBar routes={props.routes} />
       <Logout />
     </Layout>

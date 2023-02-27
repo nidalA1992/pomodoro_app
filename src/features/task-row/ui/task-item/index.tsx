@@ -1,9 +1,10 @@
 import React from "react";
 import type { EventHandler, ReactNode, SyntheticEvent } from "react";
 
-import s from "./styles.module.scss";
 import { CircleButton, IconButton } from "shared/ui/buttons";
-import DropdownIcon from "../task-dropdown/ui/icons/dropdown-icon";
+import { DropdownIcon } from "shared/ui/icons";
+
+import s from "./styles.module.scss";
 
 export interface ITaskItemProps {
   content: string;

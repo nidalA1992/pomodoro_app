@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import { LogoIcon } from "../icons/logo-icon";
+import { LogoIcon } from "shared/ui/icons";
 
 import s from "./styles.module.scss";
 

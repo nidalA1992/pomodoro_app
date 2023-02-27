@@ -5,3 +5,4 @@ export { Modal } from "./modal";
 export { FormInput } from "./form-input";
 export { GenericList } from "./generic-list";
 export { InputRange } from "./input-range";
+export { UserBadge } from "./user-bage";
