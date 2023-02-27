@@ -1,6 +1,6 @@
 import React, { forwardRef } from "react";
 
-import { IconButton } from "shared/ui/buttons";
+import { MenuButton } from "shared/ui/buttons";
 import { DecreaseIcon } from "shared/ui/icons";
 import { DeleteIcon } from "shared/ui/icons";
 import { EditIcon } from "shared/ui/icons";
@@ -19,22 +19,22 @@ export const TaskDropdown = forwardRef<HTMLDivElement, ITaskDropDownProps>(
 
     return (
       <div className={s.wrapper} style={{ top, left }} ref={ref}>
-        <IconButton icon={<IncreaseIcon />} onClick={cb.increaseTask}>
+        <MenuButton icon={<IncreaseIcon />} onClick={cb.increaseTask}>
           Увеличить
-        </IconButton>
-        <IconButton
+        </MenuButton>
+        <MenuButton
           disabled={isDisable}
           icon={<DecreaseIcon />}
           onClick={cb.decreaseTask}
         >
           Уменьшить
-        </IconButton>
-        <IconButton icon={<EditIcon />} onClick={cb.closeEditMode}>
+        </MenuButton>
+        <MenuButton icon={<EditIcon />} onClick={cb.closeEditMode}>
           Редактировать
-        </IconButton>
-        <IconButton icon={<DeleteIcon />} onClick={cb.deleteTask}>
+        </MenuButton>
+        <MenuButton icon={<DeleteIcon />} onClick={cb.deleteTask}>
           Удалить
-        </IconButton>
+        </MenuButton>
       </div>
     );
   }

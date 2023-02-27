@@ -8,11 +8,11 @@ import { BaseButton } from "../base-button";
 
 type IconButtonProps = ButtonProps & { icon: ReactNode };
 
-export const IconButton = (props: IconButtonProps) => {
+export const MenuButton = (props: IconButtonProps) => {
   const { disabled, icon, children, onClick } = props;
   return (
     <BaseButton
-      className={s["icon-button"]}
+      className={s["menu-button"]}
       disabled={disabled}
       onClick={onClick}
     >

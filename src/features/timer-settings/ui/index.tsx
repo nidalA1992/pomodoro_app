@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 import { Modal } from "shared/ui";
-import { IconButton } from "shared/ui/buttons";
+import { MenuButton } from "shared/ui/buttons";
+import { GearIcon } from "shared/ui/icons";
 
-import { GearIcon } from "./icons/gear-icon";
 import { FormSettings } from "./form-settings";
-import { AnimatePresence } from "framer-motion";
 
 export const TimerSettings = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,7 @@ export const TimerSettings = () => {
 
   return (
     <>
-      <IconButton icon={<GearIcon />} onClick={handleClick} />
+      <MenuButton icon={<GearIcon />} onClick={handleClick} />
 
       <AnimatePresence>
         {isOpen && (

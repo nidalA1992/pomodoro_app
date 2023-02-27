@@ -1,7 +1,7 @@
 import React from "react";
 import type { EventHandler, ReactNode, SyntheticEvent } from "react";
 
-import { CircleButton, IconButton } from "shared/ui/buttons";
+import { CircleButton, MenuButton } from "shared/ui/buttons";
 import { DropdownIcon } from "shared/ui/icons";
 
 import s from "./styles.module.scss";
@@ -47,7 +47,7 @@ export const TaskItem = (props: ITaskItemProps) => {
           ✔
         </CircleButton>
       ) : (
-        <IconButton icon={<DropdownIcon />} onClick={handleClick} />
+        <MenuButton icon={<DropdownIcon />} onClick={handleClick} />
       )}
     </div>
   );

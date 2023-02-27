@@ -6,3 +6,4 @@ export { IncreaseIcon } from "./increase-icon";
 export { LogoIcon } from "./logo-icon";
 export { StatisticsIcon } from "./statistics-icon";
 export { LogoutIcon } from "./logout-icon";
+export { GearIcon } from "./gear-icon";

@@ -1,27 +1,45 @@
+import { useEffect } from "react";
+import { ReactNode } from "react";
+
 import { TimerControls } from "./controls";
 import { Display } from "./display";
 import { Layout } from "./layout";
 import { useTimerReducer } from "../lib/useTimerReducer";
-import { ITimerState } from "../model/types";
-import { useEffect } from "react";
+import type { ITimerState } from "../model/types";
+import { format } from "../lib/format-time";
+import { useAppSelector } from "shared/lib";
+import {
+  selectActiveTaskId,
+  selectTaskById,
+  selectTasksIds,
+} from "entities/task";
 
 //temporary
-const activeTask = {
-  id: "TaskId",
-  pomodoroAmount: 2,
-  pomodoroPassed: 0,
-  done: false,
-  content: "task content",
-  createdAt: "DateString",
-  updatedAt: "DateString",
-};
+// const activeTask = {
+//   id: "TaskId",
+//   pomodoroAmount: 2,
+//   pomodoroPassed: 0,
+//   done: false,
+//   content: "task content",
+//   createdAt: "DateString",
+//   updatedAt: "DateString",
+// };
+
 const pomodoroTime = 0.05 * 1000 * 60;
 const breakTime = 0.05 * 1000 * 60;
 const bigBreakTime = 15 * 1000 * 60;
 const bigBreakFrequency = 4;
 
-export const Timer = () => {
+interface ITimerProps {
+  settings: ReactNode;
+}
+
+export const Timer = ({ settings }: ITimerProps) => {
   console.log("TimerRender");
+
+  const activeTaskId = useAppSelector(selectActiveTaskId);
+  const tasks = useAppSelector(selectTasksIds);
+  const activeTask = useAppSelector(selectTaskById(activeTaskId));
 
   const initialState: ITimerState = {
     status: "idle",
@@ -35,21 +53,21 @@ export const Timer = () => {
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
 
-    if (state.time === 0 && activeTask.pomodoroAmount === 0) {
+    if (state.time === 0 && activeTask?.amount === 0) {
       setStatus("idle");
     }
 
     if (state.status === "process" && state.time === 0) {
-      console.log(activeTask.pomodoroAmount, activeTask.pomodoroPassed);
+      console.log(activeTask?.amount, activeTask?.passed);
       setStatus("break");
       setTime(initialState.breakTime);
       // setPomodoroCompleted();
-      activeTask.pomodoroAmount--;
+      // activeTask?.amount--;
     }
 
     if (state.status === "break" && state.time === 0) {
       setStatus("process");
-      activeTask.pomodoroPassed++;
+      // activeTask.pomodoroPassed++;
 
       setTime(initialState.time);
       // setPomodoroCompleted();
@@ -69,23 +87,16 @@ export const Timer = () => {
   return (
     <Layout
       status={state.status}
-      taskNumber={5}
+      taskNumber={tasks.indexOf(activeTaskId) + 1}
       taskText={activeTask?.content || ""}
-      pomodoro={activeTask?.pomodoroPassed + 1 || 1}
+      pomodoro={activeTask?.passed || 1}
       controlsSlot={
         <TimerControls setStatus={setStatus} status={state.status} />
       }
       displaySlot={
         <Display status={state.status} timeValue={format(state.time)} />
       }
-      // settingsSlot={<TimerSettings />}
+      settingsSlot={settings}
     />
   );
 };
-
-function format(timestamp: number) {
-  const min = String(Math.floor(timestamp / 60 / 1000));
-  const sec = String((timestamp / 1000) % 60);
-
-  return `${min.length < 2 ? 0 : ""}${min} : ${sec.length < 2 ? 0 : ""}${sec}`;
-}

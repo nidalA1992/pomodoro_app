@@ -7,7 +7,7 @@ import { useAppDispatch, validation } from "shared/lib";
 import { PrimaryButton } from "shared/ui/buttons";
 import { fetchAddTask } from "entities/task";
 
-import { useTaskFormReducer } from "../../lib/useTaskFormReducer";
+import { useTaskFormReducer } from "../task-row/lib/useTaskFormReducer";
 
 export const TaskForm = () => {
   const [data, stateDispatch] = useTaskFormReducer();
