@@ -1,9 +1,8 @@
-@use '../../../../app/styles/mixins/flex';
-@use '../../../../app/styles/mixins/font' as *;
+@use 'src/app/styles/utils';
 
 .user {
-  @include flex.align(center);
-  @include font(18px, 100, null, var(--white));
+  @include utils.flex(null, center);
+  @include utils.font(18px, 100, null, var(--white));
   padding-inline: 20px;
   background-color: var(--tomato-primary);
   border-radius: 15px;

@@ -1,8 +1,8 @@
-@use '../../../../../app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .wrapper {
   display: flex;
-  @include flex.justify(space-evenly);
+  @include utils.flex(space-evenly);
   flex-wrap: wrap;
   padding: 30px;
   background-color: white;

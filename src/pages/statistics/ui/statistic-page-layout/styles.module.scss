@@ -1,14 +1,14 @@
-@use '../../../../app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .wrapper {
 }
 
 .head {
-  @include flex.justify(space-between);
+  @include utils.flex(space-between);
   margin-bottom: 30px;
 
 }
 
 .content {
-  @include flex.align(flex-start);
+  @include utils.flex(null, flex-start);
 }

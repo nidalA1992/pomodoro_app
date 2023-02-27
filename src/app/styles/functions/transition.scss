@@ -1,9 +1,0 @@
-@use "sass:list";
-
-@function transition($props...) {
-  $transProps: ();
-  @each $prop in $props {
-    $transProps: list.append($transProps, $prop 300ms ease-in, comma);
-  }
-  @return $transProps;
-}

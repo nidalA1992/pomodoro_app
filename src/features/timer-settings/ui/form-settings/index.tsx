@@ -3,9 +3,9 @@ import type { ChangeEvent } from "react";
 import { shallowEqual } from "react-redux";
 
 import { useAppDispatch, useAppSelector } from "shared/lib";
-import { Button, Form, InputRange } from "shared/ui";
-import { updateTimer } from "entities/timer";
-import { selectTimerOptions } from "entities/timer";
+import { Form, InputRange } from "shared/ui";
+import { PrimaryButton } from "shared/ui/buttons";
+import { updateTimer, selectTimerOptions } from "entities/timer";
 
 import {
   setLargeBreak,
@@ -89,12 +89,9 @@ export const FormSettings = () => {
           min={TimerRanges.MIN_LARGE_BREAK_FREQUENCY}
           max={TimerRanges.MAX_LARGE_BREAK_FREQUENCY}
         />
-        <Button
-          disabled={shallowEqual(options, state) || saved}
-          className={"button"}
-        >
+        <PrimaryButton disabled={shallowEqual(options, state) || saved}>
           {saved ? "Сохранено" : "Сохранить"}
-        </Button>
+        </PrimaryButton>
       </Form>
     </Layout>
   );

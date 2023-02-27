@@ -1,1 +1,1 @@
-export { FullTime } from "./ui/FullTime";
+export { FullTime } from "./ui";

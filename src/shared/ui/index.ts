@@ -1,5 +1,4 @@
 export { Form } from "./form";
-export { Button } from "./button";
 export { Title } from "./title";
 export { Layout } from "./layout";
 export { Modal } from "./modal";

@@ -1,0 +1,51 @@
+@use 'src/app/styles/utils';
+
+.timer {
+  .head {
+    @include utils.flex(space-betweeb, center);
+    background-color: var(--greyC4);
+    padding: 20px 40px;
+    color: var(--white);
+    transition: utils.transition(var(--dur), var(--tf), background-color);
+
+    &__task {
+      flex-basis: 25%;
+      font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &__count {
+      margin-left: auto;
+      padding-inline: 30px;
+    }
+  }
+
+  .body {
+    padding: 100px 30px;
+    background-color: var(--greyF4);
+
+    .title {
+      @include utils.font(16px, 400, 17px);
+      text-align: center;
+      margin-bottom: 32px;
+
+      span {
+        color: var(--grey99);
+      }
+    }
+  }
+}
+
+.timer.process .head,
+.timer.process-pause .head {
+  background-color: var(--tomato-primary);
+}
+
+.timer.break .head,
+.timer.break-pause .head {
+  background-color: var(--primary-green);
+}
+
+

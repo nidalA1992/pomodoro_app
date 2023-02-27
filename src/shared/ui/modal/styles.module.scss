@@ -1,8 +1,7 @@
-@use '../../../app/styles/mixins/flex';
-@use '../../../app/styles/functions/transition' as *;
+@use '../../../app/styles/utils';
 
 .background {
-  @include flex.center;
+  @include utils.flex(center, center);
   position: fixed;
   height: 100vh;
   inset: 0;
@@ -16,7 +15,7 @@
     color: var(--white);
     font-size: 32px;
     cursor: pointer;
-    transition: transition(color);
+    transition: utils.transition(var(--dur), var(--tf), color);
     &:is(:hover) {
       color: var(--primary-green);
     } 

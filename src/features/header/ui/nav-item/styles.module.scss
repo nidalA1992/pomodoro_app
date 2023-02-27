@@ -1,0 +1,11 @@
+@use 'src/app/styles/utils';
+
+.link {
+  @include utils.flex(null, center);
+  height: 100%;
+  color: var(--tomato-primary);
+}
+
+.active {
+  font-weight: 900;
+}

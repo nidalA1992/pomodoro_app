@@ -1,10 +1,10 @@
-@use '../../../app/styles/mixins/font' as *;
+@use 'src/app/styles/utils';
 
 .title {
-  @include font(24px, 700);
+  @include utils.font(24px, 700);
 }
 
 .settings-title {
-  @include font(38px, 100, null, var(--greyC4));
+  @include utils.font(38px, 100, null, var(--greyC4));
   text-align: center;
 }

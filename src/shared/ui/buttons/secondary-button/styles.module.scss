@@ -1,0 +1,10 @@
+.secondary-button {
+  background-color: transparent;
+  border-color: var(--tomato-primary);
+  color: var(--tomato-primary);
+
+  &:hover {
+    background-color: var(--tomato-primary);
+    color: var(--white);
+  }
+}

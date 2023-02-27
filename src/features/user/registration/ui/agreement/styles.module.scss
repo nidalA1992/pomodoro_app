@@ -1,7 +1,7 @@
-@use '../../../../../app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .label {
-  @include flex.center;
+  @include utils.flex(center, center);
   color: white;
   user-select: none;
   order: 1;

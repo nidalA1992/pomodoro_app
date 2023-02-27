@@ -1,0 +1,9 @@
+@use 'src/app/styles/utils';
+
+.circle-button {
+  @include utils.flex(center, center);
+  padding: 0;
+  border-radius: 50%;
+  line-height: 1px;
+  background-color: var(--greyC4);
+}

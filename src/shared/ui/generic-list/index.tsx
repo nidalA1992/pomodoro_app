@@ -1,6 +1,6 @@
-import { nanoid } from "nanoid";
 import React, { useMemo } from "react";
 import type { JSXElementConstructor } from "react";
+import { nanoid } from "@reduxjs/toolkit";
 
 interface IListProps<P> {
   props: P[];

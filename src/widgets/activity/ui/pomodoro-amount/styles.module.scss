@@ -1,8 +1,7 @@
-@use '../../../../app/styles/mixins/flex';
-@use '../../../../app/styles/mixins/font' as *;
+@use 'src/app/styles/utils';
 
 .wrapper {
-  @include flex.center;
+  @include utils.flex(center, center);
   padding-block: 32px;
   background-color: var(--greyF4);
   width: 296px;
@@ -13,20 +12,20 @@
 }
 
 .wrapper.has {
-  @include flex.flex(center, center, column);
+  @include utils.flex(center, center, column);
   background-color: var(--greyF4);
   padding-bottom: 0;
   
   .amount {
-    @include flex.center;
-    @include font(24px, 700, 33px, var(--grey99));
+    @include utils.flex(center, center);
+    @include utils.font(24px, 700, 33px, var(--grey99));
   }
   
   .footer {
     margin-top: 30px;
     padding-block: 10px;
     width: 100%;
-    @include font(24px, 700, 33px, var(--white));
+    @include utils.font(24px, 700, 33px, var(--white));
     text-align: center;
     color: var(--white);
   }

@@ -1,7 +1,7 @@
-@use '../../../app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .user-form {
-  @include flex.column;
+  @include utils.flex(null, null, column);
   padding: 25px 90px;
   background-color: var(--tomato-form);
   gap: 25px;
@@ -20,7 +20,7 @@
 }
 
 .task-form {
-  @include flex.column;
+  @include utils.flex(null, null, column);
   
   input {
     width: 100%;
@@ -33,7 +33,7 @@
 }
 
 .settings-form {
-  @include flex.column;
+  @include utils.flex(null, null, column);
   margin-inline: auto;
   gap: 20px;
   

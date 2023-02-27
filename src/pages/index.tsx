@@ -5,7 +5,7 @@ import { selectUser } from "entities/user";
 import { useAppSelector } from "shared/lib/hooks";
 import { useIsAuth } from "entities/user";
 import { Layout } from "shared/ui";
-import { Header } from "widgets/header";
+import { Header } from "features/header";
 
 const TasksPage = lazy(() => import("./tasks"));
 const StatisticsPage = lazy(() => import("./statistics"));

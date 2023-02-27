@@ -1,4 +1,4 @@
-@use '../../../app/styles/mixins/font' as *;
+@use 'src/app/styles/utils';
 
 .label {
   position: relative;
@@ -13,7 +13,7 @@
 }
 
 .error {
-  @include font(12px, null, null, var(--color));
+  @include utils.font(12px, null, null, var(--color));
   position: absolute;
   bottom: -17px;
   width: 100%;

@@ -1,0 +1,13 @@
+@use '../../../../app/styles/utils';
+
+.nav {
+  @include utils.flex(null, center);
+  margin-right: 10px;
+  gap: 10px;
+  min-width: 100px;
+
+  ul {
+    display: flex;
+    gap: 10px;
+  }
+}

@@ -1,39 +1,65 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  //color: var(--black);
-  
-  //background-color: var(--black);
-  //color: var(--white);
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
   font-family: "FC UI Display", sans-serif;
 
 }
 
-h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
+ul,
+ol {
   list-style: none;
+  padding: 0;
 }
 
-a {
-  text-decoration: none;
-  color: var(--black);
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-button {
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  background-color: transparent;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
+  }
 }

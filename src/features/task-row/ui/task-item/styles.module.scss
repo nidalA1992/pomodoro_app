@@ -1,0 +1,46 @@
+@use "src/app/styles/utils";
+
+
+:has(.task) > li:last-child {
+  border-bottom: 1px solid var(--greyE4);
+}
+
+.task {
+  position: relative;
+  @include utils.flex(null, center);
+  padding: 15px 0;
+  border-top: 1px solid var(--greyE4);
+  transition: utils.transition(var(--dur), var(--tf), background-color);
+  cursor: pointer;
+  
+  button {
+    margin-left: auto;
+  }
+  
+  &:hover {
+    background-color: var(--greyF4);
+  }
+  
+  &.active > * {
+    color: var(--primary-green);
+  }
+}
+
+.amount {
+  @include utils.flex(center, center);
+  @include utils.size(25px, 25px);
+  flex-shrink: 0;
+  margin-right: 10px;
+  border: 1px solid var(--greyE4);
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.content {
+  @include utils.font(null, 300, 15px, var(--black));
+  min-width: 32px;
+  min-height: 18px;
+  line-height: 18px;
+  transition: utils.transition(var(--dur), var(--tf), background-color);
+  position: relative;
+}

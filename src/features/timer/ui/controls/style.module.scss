@@ -1,0 +1,6 @@
+@use 'src/app/styles/utils';
+
+.controls {
+  @include utils.flex(center, center);
+  column-gap: 25px;
+}

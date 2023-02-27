@@ -1,9 +1,9 @@
-@use 'src/app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .fallback {
   background: rgba(38, 50, 56, 0.9);
   height: 100vh;
-  @include flex.center;
+  @include utils.flex(center, center);
 }
 
 .spinner {

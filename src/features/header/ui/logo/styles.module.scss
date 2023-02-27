@@ -1,0 +1,21 @@
+@use '../../../../app/styles/utils';
+
+.logo {
+  position: relative;
+  @include utils.flex(center, center);
+  
+  
+  svg {
+    width: 40px;
+    margin-right: 12px;
+  }
+  
+  h1 {
+    @include utils.font(24px, 300, 24px, var(--tomato-primary));
+  }
+  
+  a {
+    position: absolute;
+    inset: 0;
+  }
+}

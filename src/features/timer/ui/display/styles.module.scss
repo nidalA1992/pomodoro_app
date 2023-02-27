@@ -1,0 +1,24 @@
+@use 'src/app/styles/utils';
+
+.timerDigits {
+  @include utils.font(150px, 200, 179px);
+  transition: utils.transition(var(--dur), var(--tf), color);
+  width: 445px;
+}
+
+.timerDisplay {
+  $offset: 30px;
+
+  @include utils.flex(center, center);
+  column-gap: $offset;
+  transform: translateX($offset);
+}
+
+
+.timerDigits.process {
+  color: var(--tomato-primary);
+}
+
+.timerDigits.break {
+  color: var(--primary-green);
+}

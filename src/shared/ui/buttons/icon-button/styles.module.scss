@@ -1,0 +1,26 @@
+@use 'src/app/styles/utils';
+
+.icon-button {
+  @include utils.flex(center, center);
+  @include utils.font(16px, 300, 1, var(--grey99));
+  padding: 5px 15px;
+  background-color: transparent;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  &:disabled {
+    svg path {
+      fill: var(--greyC4);
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  &:hover {
+    background-color: var(--greyF4);
+  }
+}

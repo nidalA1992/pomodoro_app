@@ -1,4 +1,4 @@
-@use '../../../app/styles/mixins/flex';
+@use 'src/app/styles/utils';
 
 .label {
   color: var(--greyC4);
@@ -8,7 +8,7 @@
 }
 
 .labelWrapper {
-  @include flex.flex(space-between, center);
+  @include utils.flex(space-between, center);
 }
 
 .range {

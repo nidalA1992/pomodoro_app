@@ -1,0 +1,52 @@
+@use "sass:list";
+
+@mixin flex(
+  $justify: initial,
+  $align: initial,
+  $dir: initial,
+  $wrap: nowrap
+
+) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+}
+
+@mixin font(
+  $size: initial,
+  $weight: initial,
+  $lineHeight: initial,
+  $color: var(--black)
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin position(
+  $top: initial,
+  $right: initial,
+  $bottom: initial,
+  $left: initial
+) {
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+@mixin size($width: initial, $height: initial) {
+  width: $width;
+  height: $height;
+}
+
+@function transition($duration, $timing-function, $props...) {
+  $transProps: ();
+  @each $prop in $props {
+    $transProps: list.append($transProps, $prop $duration $timing-function, comma);
+  }
+  @return $transProps;
+}

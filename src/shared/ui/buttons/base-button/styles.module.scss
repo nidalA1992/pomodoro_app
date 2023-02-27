@@ -1,0 +1,21 @@
+@use 'src/app/styles/utils';
+
+.button {
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-weight: 500;
+
+  transition: utils.transition(
+      var(--dur),
+      var(--tf),
+      background-color,
+      color,
+      border-color
+  );
+
+  &:disabled {
+    cursor: default;
+  }
+
+
+}

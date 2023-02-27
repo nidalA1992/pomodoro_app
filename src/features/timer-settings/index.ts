@@ -1,1 +1,1 @@
-export { TimerSettings } from "./ui/timer-settings";
+export { TimerSettings } from "./ui";
