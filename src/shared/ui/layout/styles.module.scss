@@ -1,0 +1,19 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr min(1440px, calc(100% - 80px)) 1fr;
+  column-gap: 40px;
+
+  & > * {
+    grid-column: 2;
+  }
+}
+
+.header {
+  box-shadow: var(--box-shadow);
+}
+
+.main {
+  padding-block: 40px;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+}

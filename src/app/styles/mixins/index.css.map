@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "index.scss",
+        "font.scss",
+        "flex.scss",
+        "size.scss",
+        "pos.scss"
+    ],
+    "names": [],
+    "file": "index.css"
+}

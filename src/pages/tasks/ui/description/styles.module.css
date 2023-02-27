@@ -1,0 +1,15 @@
+.description {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  line-height: 33px;
+}
+
+.description ul {
+  list-style: initial;
+  padding-left: 20px;
+}
+
+.description li::marker {
+  color: var(--tomato-primary);
+}
+/*# sourceMappingURL=styles.module.css.map */

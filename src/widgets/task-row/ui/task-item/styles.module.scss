@@ -1,0 +1,48 @@
+@use "../../../../app/styles/mixins/flex";
+@use "../../../../app/styles/mixins/font" as *;
+@use "../../../../app/styles/mixins/size" as *;
+@use "../../../../app/styles/functions/transition" as *;
+
+:has(.task) > li:last-child {
+  border-bottom: 1px solid var(--greyE4);
+}
+
+.task {
+  position: relative;
+  @include flex.align(center);
+  padding: 15px 0;
+  border-top: 1px solid var(--greyE4);
+  transition: transition(background-color);
+  cursor: pointer;
+  
+  button {
+    margin-left: auto;
+  }
+  
+  &:hover {
+    background-color: var(--greyF4);
+  }
+  
+  &.active > * {
+    color: var(--primary-green);
+  }
+}
+
+.amount {
+  @include flex.center;
+  @include size(25px, 25px);
+  flex-shrink: 0;
+  margin-right: 10px;
+  border: 1px solid var(--greyE4);
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.content {
+  @include font(null, 300, 15px, var(--black));
+  min-width: 32px;
+  min-height: 18px;
+  line-height: 18px;
+  transition: transition(background-color);
+  position: relative;
+}

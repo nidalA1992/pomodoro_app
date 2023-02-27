@@ -1,0 +1,24 @@
+@use '../../../app/styles/mixins/flex';
+@use '../../../app/styles/functions/transition' as *;
+
+.background {
+  @include flex.center;
+  position: fixed;
+  height: 100vh;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(7px);
+  
+  .closeButton {
+    position: absolute;
+    top: 50px;
+    right: 70px;
+    color: var(--white);
+    font-size: 32px;
+    cursor: pointer;
+    transition: transition(color);
+    &:is(:hover) {
+      color: var(--primary-green);
+    } 
+  }
+}

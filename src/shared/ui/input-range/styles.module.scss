@@ -1,0 +1,40 @@
+@use '../../../app/styles/mixins/flex';
+
+.label {
+  color: var(--greyC4);
+  font-weight: 100;
+  letter-spacing: 0.05em;
+  word-spacing: 1px;
+}
+
+.labelWrapper {
+  @include flex.flex(space-between, center);
+}
+
+.range {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    padding-top: 10px;
+    min-width: 350px;
+  
+  &::-webkit-slider-runnable-track {
+    height: 16px;
+    border: 1px solid var(--greyC4);
+  }
+  &::-webkit-slider-thumb {
+    background: var(--tomato-primary);
+    cursor: pointer;
+    width: 40px;
+    height: 14.5px;
+    -webkit-appearance: none;
+  }
+}
+
+.value {
+  min-width: 30px;
+  text-align: end;
+  font-weight: 900;
+  color: var(--greyC4);
+}

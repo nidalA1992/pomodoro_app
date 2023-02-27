@@ -1,0 +1,14 @@
+@use '../../../../app/styles/mixins/flex';
+
+.wrapper {
+}
+
+.head {
+  @include flex.justify(space-between);
+  margin-bottom: 30px;
+
+}
+
+.content {
+  @include flex.align(flex-start);
+}

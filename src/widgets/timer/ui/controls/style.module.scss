@@ -1,0 +1,6 @@
+@use '../../../../app/styles/mixins/flex';
+
+.controls {
+  @include flex.center;
+  column-gap: 25px;
+}

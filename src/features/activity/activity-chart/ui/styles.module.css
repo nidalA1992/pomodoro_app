@@ -1,0 +1,9 @@
+.chart {
+  width: 952px;
+  height: 471px;
+}
+
+.chart canvas {
+  background-color: var(--greyF4);
+}
+/*# sourceMappingURL=styles.module.css.map */

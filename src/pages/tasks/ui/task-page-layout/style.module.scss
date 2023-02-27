@@ -1,0 +1,23 @@
+.wrapper {
+  display: flex;
+  column-gap: 30px;
+}
+
+.table {
+  flex: 1 1 40%;
+  form {
+    margin-bottom: 25px;
+    input {
+      margin-bottom: 25px;
+    }
+  }
+
+  ul {
+    margin-bottom: 25px;
+  }
+}
+
+.timer {
+  flex: 2 1 55%;
+}
+

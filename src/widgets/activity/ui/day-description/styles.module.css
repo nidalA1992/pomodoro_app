@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 25px;
+  background-color: var(--greyF4);
+  width: 296px;
+  height: 260px;
+}
+
+.wrapper .title {
+  margin-bottom: 15px;
+}
+
+.wrapper .description {
+  line-height: 28px;
+}
+
+.wrapper .time {
+  color: var(--tomato-primary);
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.module.css.map */

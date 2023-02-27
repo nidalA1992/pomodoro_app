@@ -1,0 +1,13 @@
+@use '../../../../app/styles/mixins/flex';
+@use '../../../../app/styles/mixins/font' as *;
+
+.user {
+  @include flex.align(center);
+  @include font(18px, 100, null, var(--white));
+  padding-inline: 20px;
+  background-color: var(--tomato-primary);
+  border-radius: 15px;
+  margin-right: 15px;
+  margin-left: auto;
+  align-self: center;
+}

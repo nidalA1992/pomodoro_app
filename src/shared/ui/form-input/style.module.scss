@@ -1,0 +1,21 @@
+@use '../../../app/styles/mixins/font' as *;
+
+.label {
+  position: relative;
+}
+
+.input {
+  border: none;
+  padding: 20px 15px; 
+  ::placeholder {
+    color: var(--grey99);
+  }
+}
+
+.error {
+  @include font(12px, null, null, var(--color));
+  position: absolute;
+  bottom: -17px;
+  width: 100%;
+  text-align: end;
+}

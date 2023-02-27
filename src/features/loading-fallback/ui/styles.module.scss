@@ -1,0 +1,39 @@
+@use 'src/app/styles/mixins/flex';
+
+.fallback {
+  background: rgba(38, 50, 56, 0.9);
+  height: 100vh;
+  @include flex.center;
+}
+
+.spinner {
+  $size: 64px;
+  $brand: var(--tomato-primary);
+  $lite: var(--white);
+  width : $size;
+  height: $size;
+  display: inline-block;
+  position: relative;
+  &::after , &::before {
+    content: '';
+    width : $size;
+    height: $size;
+    border:2px solid $lite;
+    position: absolute;
+    left:0;
+    top: 0;
+    animation: rotationBreak 3s ease-in-out infinite alternate;
+  }
+  &::after {
+    border-color: $brand;
+    animation-direction: alternate-reverse;
+  }
+
+  @keyframes rotationBreak {
+    0% { transform: rotate(0) }
+    25% { transform: rotate(90deg)}
+    50% { transform: rotate(180deg) }
+    75% { transform: rotate(270deg)}
+    100% { transform: rotate(360deg) }
+  }
+}

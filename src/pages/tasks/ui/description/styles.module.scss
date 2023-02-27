@@ -1,0 +1,13 @@
+.description {
+  flex-basis: 45%;
+  line-height: 33px;
+  
+  ul {
+    list-style: initial;
+    padding-left: 20px;
+  }
+  
+  li::marker {
+    color: var(--tomato-primary);
+  }
+}

@@ -1,0 +1,29 @@
+@mixin align($content, $dir: initial) {
+  display: flex;
+  flex-direction: $dir;
+  align-items: $content;
+}
+
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin justify($content, $dir: initial) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $content;
+}
+
+@mixin flex($justify: initial, $align: initial, $dir: initial) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $dir;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,43 @@
+@use '../../../app/styles/mixins/flex';
+
+.user-form {
+  @include flex.column;
+  padding: 25px 90px;
+  background-color: var(--tomato-form);
+  gap: 25px;
+  
+  h2 {
+    color: white;
+    text-align: center;
+  }
+  button {
+    align-self: center;
+    padding: 15px 50px;
+  }
+  input {
+    width: 100%;
+  }
+}
+
+.task-form {
+  @include flex.column;
+  
+  input {
+    width: 100%;
+    background-color: var(--greyF4);
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}
+
+.settings-form {
+  @include flex.column;
+  margin-inline: auto;
+  gap: 20px;
+  
+  button {
+    align-self: center;
+  }
+}

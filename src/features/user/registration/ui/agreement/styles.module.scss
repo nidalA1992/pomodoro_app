@@ -1,0 +1,13 @@
+@use '../../../../../app/styles/mixins/flex';
+
+.label {
+  @include flex.center;
+  color: white;
+  user-select: none;
+  order: 1;
+  
+  .input {
+    width: initial !important;
+    margin-right: 5px;
+  }
+}

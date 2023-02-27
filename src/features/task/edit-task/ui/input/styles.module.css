@@ -1,0 +1,16 @@
+.input {
+  padding: 0;
+  outline: none;
+  border: none;
+  color: var(--black);
+  background-color: var(--greyC4);
+  font-size: 16px;
+  position: absolute;
+  inset-inline: 0;
+  width: calc(100% + 2px);
+}
+
+.form {
+  display: inline;
+}
+/*# sourceMappingURL=styles.module.css.map */

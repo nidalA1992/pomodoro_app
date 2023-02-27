@@ -1,0 +1,14 @@
+@use '../../../../../app/styles/mixins/flex';
+
+.wrapper {
+  display: flex;
+  @include flex.justify(space-evenly);
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: white;
+}
+
+.title {
+  flex: 1 1 100%;
+  text-align: center;
+}
